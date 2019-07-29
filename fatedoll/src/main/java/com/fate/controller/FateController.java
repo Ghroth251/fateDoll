@@ -5,11 +5,7 @@
  */
 package com.fate.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 import com.fate.bean.*;
 import com.fate.dao.DataDao;
@@ -176,8 +172,8 @@ public class FateController {
 		if(map.get("Date")==null||!map.get("Date").equals(getTodayDate())){
 			int[] doll = fateArray(100);
 			int[] dollNum = new int[3];
-			for(int i=0;i<doll.length;i++){
-				switch (doll[i]) {
+			for (int aDoll : doll) {
+				switch (aDoll) {
 					case -1:
 						dollNum[0]++;
 						break;
@@ -192,9 +188,11 @@ public class FateController {
 			map.put("Date",getTodayDate());
 			u.setUserData(map);
 			sqlDao.saveData(map,u,"QQ");
-			sbd.append("在一百次的命运中，" +u.getUserName()+"得到了"+dollNum[2]+"次的‘1’"+
-					dollNum[1]+"次的‘0’与"+dollNum[0]+"次的‘-1’。\\n"+u.getUserName()+
-					"的命运合计为【"+(dollNum[2]-dollNum[0])+"】。");
+			sbd.append("在一百次的命运中，").append(u.getUserName()).
+                    append("得到了").append(dollNum[2]).append("次的‘1’").
+                    append(dollNum[1]).append("次的‘0’与").append(dollNum[0]).
+                    append("次的‘-1’。\\n").append(u.getUserName()).
+                    append("的命运合计为【").append(dollNum[2] - dollNum[0]).append("】。");
 		}else{
 			sbd.append("今日已经测过了。");
 		}
@@ -229,7 +227,7 @@ public class FateController {
 				sbd.append("查无此人");
 				return groupMsg(a.getUsergroup(), sbd.toString());
 			}else{
-				LinkedHashMap<String,Object> userAtt = getDataObjectByName(avoerName,"人物").getDdata();
+				LinkedHashMap<String,Object> userAtt = Objects.requireNonNull(getDataObjectByName(avoerName, "人物")).getDdata();
 				userAvo = getUserAvo(userAtt);
 			}
 		}else{
@@ -332,8 +330,8 @@ public class FateController {
 						(mechaName.toCharArray()[0]<'9'&&mechaName.toCharArray()[0]>'0')){
 					mechaHit = getFateNum(mechaName);
 				}else{
-					mechaHit = mechaName==""?0:Integer.parseInt((String)
-							getDataByName(mechaName, "机甲").get("感应"));
+					mechaHit = mechaName.equals("") ?0:Integer.parseInt((String)
+							Objects.requireNonNull(getDataByName(mechaName, "机甲")).get("感应"));
 				}
 			}else{
 				atkName = ordinal;
@@ -342,7 +340,7 @@ public class FateController {
 				sbd.append("查无此人");
 				return groupMsg(u.getUsergroup(), sbd.toString());
 			} else {
-				atkUnitName = getDataObjectByName(atkName, "人物").getName();
+				atkUnitName = Objects.requireNonNull(getDataObjectByName(atkName, "人物")).getName();
 				attMap = getDataByName(atkName, "人物");
 				weapon = getDataByName(weaponName, "武器");
 				if (weapon == null) {
@@ -384,6 +382,7 @@ public class FateController {
 				mechaHit = mecha.getmSe();
 			}
 		}
+        @SuppressWarnings("unchecked")
 		int[] hit = hitOperation(attMap, mechaHit, weapon);
 		int hitSSum = hit[0] + hit[1] + hit[2];
 		int hitTime = Integer.parseInt((String) weapon.get("最高攻击次数"));
@@ -475,8 +474,7 @@ public class FateController {
 	private static String cset(QQuser u, String value) {
 		StringBuilder sbd = new StringBuilder("");
 		if(u.getUserID().equals("553859318")){
-			System.out.println("进入1");
-			int level = value!=null&&!value.equals("") ?Integer.parseInt(value):4;
+		    int level = value!=null&&!value.equals("") ?Integer.parseInt(value):4;
 			String[] card;
 			String cardNum;
 			switch(level){

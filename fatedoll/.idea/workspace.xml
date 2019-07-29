@@ -55,15 +55,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FateController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FateController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="2720">
+              <caret line="1117" column="1" lean-forward="true" selection-start-line="1117" selection-start-column="1" selection-end-line="1117" selection-end-column="1" />
               <folding>
-                <element signature="e#0#37650#0" expanded="true" />
+                <element signature="e#0#37788#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="method#addPC#0;class#FateController#0" expanded="false" />
                 <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
+                <element signature="method#avo#0;class#FateController#0" expanded="false" />
+                <element signature="method#upmecha#0;class#FateController#0" expanded="false" />
+                <element signature="method#umecha#0;class#FateController#0" expanded="false" />
+                <element signature="method#atk#0;class#FateController#0" expanded="false" />
+                <element signature="e#11798#11828#1" expanded="true" />
+                <element signature="method#setm#0;class#FateController#0" expanded="false" />
+                <element signature="method#addm#0;class#FateController#0" expanded="false" />
+                <element signature="method#dc#0;class#FateController#0" expanded="false" />
+                <element signature="method#cset#0;class#FateController#0" expanded="false" />
+                <element signature="method#diceQH#0;class#FateController#0" expanded="false" />
+                <element signature="method#fz#0;class#FateController#0" expanded="false" />
+                <element signature="method#fon#0;class#FateController#0" expanded="false" />
+                <element signature="method#foff#0;class#FateController#0" expanded="false" />
+                <element signature="method#fr#0;class#FateController#0" expanded="false" />
+                <element signature="method#setu#0;class#FateController#0" expanded="false" />
+                <element signature="method#mfQH#0;class#FateController#0" expanded="false" />
+                <element signature="method#hf#0;class#FateController#0" expanded="false" />
+                <element signature="method#fd#0;class#FateController#0" expanded="false" />
+                <element signature="method#uList#0;class#FateController#0" expanded="false" />
+                <element signature="method#addItem#0;class#FateController#0" expanded="false" />
+                <element signature="method#mfZZ#0;class#FateController#0" expanded="false" />
+                <element signature="method#fatedbLink#0;class#FateController#0" expanded="false" />
+                <element signature="method#set#0;class#FateController#0" expanded="false" />
+                <element signature="method#set#1;class#FateController#0" expanded="false" />
+                <element signature="method#tra#0;class#FateController#0" expanded="false" />
+                <element signature="method#setnew#0;class#FateController#0" expanded="false" />
+                <element signature="method#fnn#0;class#FateController#0" expanded="false" />
+                <element signature="method#fate#0;class#FateController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -128,11 +157,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="-3108">
+              <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/dao/DataDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -143,16 +182,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3885">
               <caret line="118" column="16" lean-forward="false" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/BaseDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2294">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -220,9 +249,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fate/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fate/util/MechaUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java" />
       </list>
     </option>
   </component>
@@ -270,11 +299,10 @@
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
-    <option name="y" value="1" />
     <option name="width" value="1934" />
-    <option name="height" value="1048" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -570,12 +598,12 @@
       <workItem from="1563802356865" duration="71569000" />
       <workItem from="1564026481950" duration="28246000" />
       <workItem from="1564110859323" duration="4258000" />
-      <workItem from="1564129944523" duration="3297000" />
+      <workItem from="1564129944523" duration="8884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113772000" />
+    <option name="totallyTimeSpent" value="119359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,7 +615,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -630,7 +658,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="56" />
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -674,9 +702,38 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37650#0" expanded="true" />
+            <element signature="e#0#37788#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="method#addPC#0;class#FateController#0" expanded="false" />
             <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
+            <element signature="method#avo#0;class#FateController#0" expanded="false" />
+            <element signature="method#upmecha#0;class#FateController#0" expanded="false" />
+            <element signature="method#umecha#0;class#FateController#0" expanded="false" />
+            <element signature="method#atk#0;class#FateController#0" expanded="false" />
+            <element signature="e#11798#11828#1" expanded="true" />
+            <element signature="method#setm#0;class#FateController#0" expanded="false" />
+            <element signature="method#addm#0;class#FateController#0" expanded="false" />
+            <element signature="method#dc#0;class#FateController#0" expanded="false" />
+            <element signature="method#cset#0;class#FateController#0" expanded="false" />
+            <element signature="method#diceQH#0;class#FateController#0" expanded="false" />
+            <element signature="method#fz#0;class#FateController#0" expanded="false" />
+            <element signature="method#fon#0;class#FateController#0" expanded="false" />
+            <element signature="method#foff#0;class#FateController#0" expanded="false" />
+            <element signature="method#fr#0;class#FateController#0" expanded="false" />
+            <element signature="method#setu#0;class#FateController#0" expanded="false" />
+            <element signature="method#mfQH#0;class#FateController#0" expanded="false" />
+            <element signature="method#hf#0;class#FateController#0" expanded="false" />
+            <element signature="method#fd#0;class#FateController#0" expanded="false" />
+            <element signature="method#uList#0;class#FateController#0" expanded="false" />
+            <element signature="method#addItem#0;class#FateController#0" expanded="false" />
+            <element signature="method#mfZZ#0;class#FateController#0" expanded="false" />
+            <element signature="method#fatedbLink#0;class#FateController#0" expanded="false" />
+            <element signature="method#set#0;class#FateController#0" expanded="false" />
+            <element signature="method#set#1;class#FateController#0" expanded="false" />
+            <element signature="method#tra#0;class#FateController#0" expanded="false" />
+            <element signature="method#setnew#0;class#FateController#0" expanded="false" />
+            <element signature="method#fnn#0;class#FateController#0" expanded="false" />
+            <element signature="method#fate#0;class#FateController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -886,14 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/dao/DataDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/dao/MechaDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -985,18 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37650#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -1051,9 +1088,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="-3108">
+          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/dao/DataDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="1117" column="1" lean-forward="true" selection-start-line="1117" selection-start-column="1" selection-end-line="1117" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#37788#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#addPC#0;class#FateController#0" expanded="false" />
+            <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
+            <element signature="method#avo#0;class#FateController#0" expanded="false" />
+            <element signature="method#upmecha#0;class#FateController#0" expanded="false" />
+            <element signature="method#umecha#0;class#FateController#0" expanded="false" />
+            <element signature="method#atk#0;class#FateController#0" expanded="false" />
+            <element signature="e#11798#11828#1" expanded="true" />
+            <element signature="method#setm#0;class#FateController#0" expanded="false" />
+            <element signature="method#addm#0;class#FateController#0" expanded="false" />
+            <element signature="method#dc#0;class#FateController#0" expanded="false" />
+            <element signature="method#cset#0;class#FateController#0" expanded="false" />
+            <element signature="method#diceQH#0;class#FateController#0" expanded="false" />
+            <element signature="method#fz#0;class#FateController#0" expanded="false" />
+            <element signature="method#fon#0;class#FateController#0" expanded="false" />
+            <element signature="method#foff#0;class#FateController#0" expanded="false" />
+            <element signature="method#fr#0;class#FateController#0" expanded="false" />
+            <element signature="method#setu#0;class#FateController#0" expanded="false" />
+            <element signature="method#mfQH#0;class#FateController#0" expanded="false" />
+            <element signature="method#hf#0;class#FateController#0" expanded="false" />
+            <element signature="method#fd#0;class#FateController#0" expanded="false" />
+            <element signature="method#uList#0;class#FateController#0" expanded="false" />
+            <element signature="method#addItem#0;class#FateController#0" expanded="false" />
+            <element signature="method#mfZZ#0;class#FateController#0" expanded="false" />
+            <element signature="method#fatedbLink#0;class#FateController#0" expanded="false" />
+            <element signature="method#set#0;class#FateController#0" expanded="false" />
+            <element signature="method#set#1;class#FateController#0" expanded="false" />
+            <element signature="method#tra#0;class#FateController#0" expanded="false" />
+            <element signature="method#setnew#0;class#FateController#0" expanded="false" />
+            <element signature="method#fnn#0;class#FateController#0" expanded="false" />
+            <element signature="method#fate#0;class#FateController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
