@@ -58,100 +58,140 @@
       <file leaf-file-name="FateController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2720">
-              <caret line="1117" column="1" lean-forward="true" selection-start-line="1117" selection-start-column="1" selection-end-line="1117" selection-end-column="1" />
+            <state relative-caret-position="648">
+              <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
-                <element signature="e#0#37788#0" expanded="true" />
+                <element signature="e#0#4517#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="method#addPC#0;class#FateController#0" expanded="false" />
-                <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
-                <element signature="method#avo#0;class#FateController#0" expanded="false" />
-                <element signature="method#upmecha#0;class#FateController#0" expanded="false" />
-                <element signature="method#umecha#0;class#FateController#0" expanded="false" />
-                <element signature="method#atk#0;class#FateController#0" expanded="false" />
-                <element signature="e#11798#11828#1" expanded="true" />
-                <element signature="method#setm#0;class#FateController#0" expanded="false" />
-                <element signature="method#addm#0;class#FateController#0" expanded="false" />
-                <element signature="method#dc#0;class#FateController#0" expanded="false" />
-                <element signature="method#cset#0;class#FateController#0" expanded="false" />
-                <element signature="method#diceQH#0;class#FateController#0" expanded="false" />
-                <element signature="method#fz#0;class#FateController#0" expanded="false" />
-                <element signature="method#fon#0;class#FateController#0" expanded="false" />
-                <element signature="method#foff#0;class#FateController#0" expanded="false" />
-                <element signature="method#fr#0;class#FateController#0" expanded="false" />
-                <element signature="method#setu#0;class#FateController#0" expanded="false" />
-                <element signature="method#mfQH#0;class#FateController#0" expanded="false" />
-                <element signature="method#hf#0;class#FateController#0" expanded="false" />
-                <element signature="method#fd#0;class#FateController#0" expanded="false" />
-                <element signature="method#uList#0;class#FateController#0" expanded="false" />
-                <element signature="method#addItem#0;class#FateController#0" expanded="false" />
-                <element signature="method#mfZZ#0;class#FateController#0" expanded="false" />
-                <element signature="method#fatedbLink#0;class#FateController#0" expanded="false" />
-                <element signature="method#set#0;class#FateController#0" expanded="false" />
-                <element signature="method#set#1;class#FateController#0" expanded="false" />
-                <element signature="method#tra#0;class#FateController#0" expanded="false" />
-                <element signature="method#setnew#0;class#FateController#0" expanded="false" />
-                <element signature="method#fnn#0;class#FateController#0" expanded="false" />
-                <element signature="method#fate#0;class#FateController#0" expanded="false" />
+                <element signature="method#OrderList#0;class#FateController#0" expanded="false" />
+                <element signature="method#aUserOrderList#0;class#FateController#0" expanded="false" />
+                <element signature="method#publicOrderList#0;class#FateController#0" expanded="false" />
+                <element signature="method#MfOrderList#0;class#FateController#0" expanded="false" />
+                <element signature="method#JjOrderList#0;class#FateController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="AUserOlderImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/AUserOlderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataMsg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/bean/DataMsg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="401">
+              <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
               <folding>
-                <element signature="method#hashCode#0;class#DataMsg#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#dc#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#fr#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#setu#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#hf#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#fd#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#uList#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#addItem#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#set#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#set#1;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#tra#0;class#AUserOlderImpl#0" expanded="false" />
+                <element signature="method#setnew#0;class#AUserOlderImpl#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MechaUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/MechaUtils.java">
+      <file leaf-file-name="JjOrderImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/JjOrderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2405">
-              <caret line="136" column="1" lean-forward="false" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+            <state relative-caret-position="537">
+              <caret line="247" column="10" lean-forward="false" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
               <folding>
-                <element signature="method#generateMecha#0;class#MechaUtils#0" expanded="false" />
-                <element signature="method#getUidByUser#0;class#MechaUtils#0" expanded="false" />
-                <element signature="e#4762#4763#0" expanded="true" />
-                <element signature="e#4820#4821#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#avo#0;class#JjOrderImpl#0" expanded="false" />
+                <element signature="method#upmecha#0;class#JjOrderImpl#0" expanded="false" />
+                <element signature="method#umecha#0;class#JjOrderImpl#0" expanded="false" />
+                <element signature="method#atk#0;class#JjOrderImpl#0" expanded="false" />
+                <element signature="e#8196#8226#1" expanded="true" />
+                <element signature="method#setm#0;class#JjOrderImpl#0" expanded="false" />
+                <element signature="method#addm#0;class#JjOrderImpl#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lemocclient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lemocclient/Lemocclient.java">
+      <file leaf-file-name="MfOrderImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/MfOrderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1475">
-              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="370">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="e#0#2401#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#mfQH#0;class#MfOrderImpl#0" expanded="false" />
+                <element signature="method#mfZZ#0;class#MfOrderImpl#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <file leaf-file-name="StaticObjectUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/StaticObjectUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="438">
+              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FateUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-598">
+              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding>
+                <element signature="method#groupMsg#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#reSpace#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#relastSpace#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#reflSpace#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#FateRoll#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#arrayRE#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#stress#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#getSent#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#getFateNum#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#fateArray#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#getDataByName#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#getDataObjectByName#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#replaceQuotes#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#getARPGUserByUser#0;class#FateUtils#0" expanded="false" />
+                <element signature="method#getTodayDate#0;class#FateUtils#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublicOrderImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/PublicOrderImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#fnn#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#fate#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#foff#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#addPC#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#fatedbLink#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#cset#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#diceQH#0;class#PublicOrderImpl#0" expanded="false" />
+                <element signature="method#jrrp#0;class#PublicOrderImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/BaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="820">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -172,26 +212,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
               <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3885">
-              <caret line="118" column="16" lean-forward="false" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FXMLDocumentController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2331">
-              <caret line="94" column="113" lean-forward="false" selection-start-line="94" selection-start-column="113" selection-end-line="94" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -220,6 +240,7 @@
       <find>Lemocclient.groupList.</find>
       <find>u</find>
       <find>war</find>
+      <find>private</find>
     </findStrings>
     <replaceStrings>
       <replace>myDice.</replace>
@@ -245,12 +266,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fate/util/MapUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/lemocclient/Lemocclient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fate/dao/UnitsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fate/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fate/util/MechaUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/publicOderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/PublicOderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/util/SqlDaoUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/MfOrderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/JjOrderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/AUserOlderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java" />
       </list>
     </option>
@@ -378,6 +405,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fate" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fatedoll" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fatedoll" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fate" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fatedoll" type="b2602c69:ProjectViewProjectNode" />
@@ -598,12 +635,12 @@
       <workItem from="1563802356865" duration="71569000" />
       <workItem from="1564026481950" duration="28246000" />
       <workItem from="1564110859323" duration="4258000" />
-      <workItem from="1564129944523" duration="8884000" />
+      <workItem from="1564129944523" duration="15641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119359000" />
+    <option name="totallyTimeSpent" value="126116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,86 +695,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="59" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/lemocclient/Lemocclient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2035">
-          <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2294">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2331">
-          <caret line="94" column="113" lean-forward="false" selection-start-line="94" selection-start-column="113" selection-end-line="94" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/MapUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1184">
-          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37788#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#addPC#0;class#FateController#0" expanded="false" />
-            <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
-            <element signature="method#avo#0;class#FateController#0" expanded="false" />
-            <element signature="method#upmecha#0;class#FateController#0" expanded="false" />
-            <element signature="method#umecha#0;class#FateController#0" expanded="false" />
-            <element signature="method#atk#0;class#FateController#0" expanded="false" />
-            <element signature="e#11798#11828#1" expanded="true" />
-            <element signature="method#setm#0;class#FateController#0" expanded="false" />
-            <element signature="method#addm#0;class#FateController#0" expanded="false" />
-            <element signature="method#dc#0;class#FateController#0" expanded="false" />
-            <element signature="method#cset#0;class#FateController#0" expanded="false" />
-            <element signature="method#diceQH#0;class#FateController#0" expanded="false" />
-            <element signature="method#fz#0;class#FateController#0" expanded="false" />
-            <element signature="method#fon#0;class#FateController#0" expanded="false" />
-            <element signature="method#foff#0;class#FateController#0" expanded="false" />
-            <element signature="method#fr#0;class#FateController#0" expanded="false" />
-            <element signature="method#setu#0;class#FateController#0" expanded="false" />
-            <element signature="method#mfQH#0;class#FateController#0" expanded="false" />
-            <element signature="method#hf#0;class#FateController#0" expanded="false" />
-            <element signature="method#fd#0;class#FateController#0" expanded="false" />
-            <element signature="method#uList#0;class#FateController#0" expanded="false" />
-            <element signature="method#addItem#0;class#FateController#0" expanded="false" />
-            <element signature="method#mfZZ#0;class#FateController#0" expanded="false" />
-            <element signature="method#fatedbLink#0;class#FateController#0" expanded="false" />
-            <element signature="method#set#0;class#FateController#0" expanded="false" />
-            <element signature="method#set#1;class#FateController#0" expanded="false" />
-            <element signature="method#tra#0;class#FateController#0" expanded="false" />
-            <element signature="method#setnew#0;class#FateController#0" expanded="false" />
-            <element signature="method#fnn#0;class#FateController#0" expanded="false" />
-            <element signature="method#fate#0;class#FateController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/bean/Mecha.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1702">
@@ -979,32 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3663">
-          <caret line="165" column="5" lean-forward="false" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#groupMsg#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#reSpace#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#relastSpace#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#reflSpace#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#FateRoll#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#arrayRE#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#stress#0;class#FateUtils#0" expanded="false" />
-            <element signature="method#replaceQuotes#0;class#FateUtils#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2294">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2331">
@@ -1102,43 +1038,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/StaticObjectUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/MfOrderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#mfQH#0;class#MfOrderImpl#0" expanded="false" />
+            <element signature="method#mfZZ#0;class#MfOrderImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/JjOrderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="247" column="10" lean-forward="false" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#avo#0;class#JjOrderImpl#0" expanded="false" />
+            <element signature="method#upmecha#0;class#JjOrderImpl#0" expanded="false" />
+            <element signature="method#umecha#0;class#JjOrderImpl#0" expanded="false" />
+            <element signature="method#atk#0;class#JjOrderImpl#0" expanded="false" />
+            <element signature="e#8196#8226#1" expanded="true" />
+            <element signature="method#setm#0;class#JjOrderImpl#0" expanded="false" />
+            <element signature="method#addm#0;class#JjOrderImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/PublicOrderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fnn#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#fate#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#foff#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#addPC#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#fatedbLink#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#cset#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#diceQH#0;class#PublicOrderImpl#0" expanded="false" />
+            <element signature="method#jrrp#0;class#PublicOrderImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-598">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="method#groupMsg#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#reSpace#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#relastSpace#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#reflSpace#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#FateRoll#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#arrayRE#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#stress#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#getSent#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#getFateNum#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#fateArray#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#getDataByName#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#getDataObjectByName#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#replaceQuotes#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#getARPGUserByUser#0;class#FateUtils#0" expanded="false" />
+            <element signature="method#getTodayDate#0;class#FateUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/impl/AUserOlderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#dc#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#fr#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#setu#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#hf#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#fd#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#uList#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#addItem#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#set#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#set#1;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#tra#0;class#AUserOlderImpl#0" expanded="false" />
+            <element signature="method#setnew#0;class#AUserOlderImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
-          <caret line="1117" column="1" lean-forward="true" selection-start-line="1117" selection-start-column="1" selection-end-line="1117" selection-end-column="1" />
+        <state relative-caret-position="648">
+          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37788#0" expanded="true" />
+            <element signature="e#0#4517#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#addPC#0;class#FateController#0" expanded="false" />
-            <element signature="method#jrrp#0;class#FateController#0" expanded="false" />
-            <element signature="method#avo#0;class#FateController#0" expanded="false" />
-            <element signature="method#upmecha#0;class#FateController#0" expanded="false" />
-            <element signature="method#umecha#0;class#FateController#0" expanded="false" />
-            <element signature="method#atk#0;class#FateController#0" expanded="false" />
-            <element signature="e#11798#11828#1" expanded="true" />
-            <element signature="method#setm#0;class#FateController#0" expanded="false" />
-            <element signature="method#addm#0;class#FateController#0" expanded="false" />
-            <element signature="method#dc#0;class#FateController#0" expanded="false" />
-            <element signature="method#cset#0;class#FateController#0" expanded="false" />
-            <element signature="method#diceQH#0;class#FateController#0" expanded="false" />
-            <element signature="method#fz#0;class#FateController#0" expanded="false" />
-            <element signature="method#fon#0;class#FateController#0" expanded="false" />
-            <element signature="method#foff#0;class#FateController#0" expanded="false" />
-            <element signature="method#fr#0;class#FateController#0" expanded="false" />
-            <element signature="method#setu#0;class#FateController#0" expanded="false" />
-            <element signature="method#mfQH#0;class#FateController#0" expanded="false" />
-            <element signature="method#hf#0;class#FateController#0" expanded="false" />
-            <element signature="method#fd#0;class#FateController#0" expanded="false" />
-            <element signature="method#uList#0;class#FateController#0" expanded="false" />
-            <element signature="method#addItem#0;class#FateController#0" expanded="false" />
-            <element signature="method#mfZZ#0;class#FateController#0" expanded="false" />
-            <element signature="method#fatedbLink#0;class#FateController#0" expanded="false" />
-            <element signature="method#set#0;class#FateController#0" expanded="false" />
-            <element signature="method#set#1;class#FateController#0" expanded="false" />
-            <element signature="method#tra#0;class#FateController#0" expanded="false" />
-            <element signature="method#setnew#0;class#FateController#0" expanded="false" />
-            <element signature="method#fnn#0;class#FateController#0" expanded="false" />
-            <element signature="method#fate#0;class#FateController#0" expanded="false" />
+            <element signature="method#OrderList#0;class#FateController#0" expanded="false" />
+            <element signature="method#aUserOrderList#0;class#FateController#0" expanded="false" />
+            <element signature="method#publicOrderList#0;class#FateController#0" expanded="false" />
+            <element signature="method#MfOrderList#0;class#FateController#0" expanded="false" />
+            <element signature="method#JjOrderList#0;class#FateController#0" expanded="false" />
           </folding>
         </state>
       </provider>

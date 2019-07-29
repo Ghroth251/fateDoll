@@ -7,17 +7,51 @@ import com.fate.dao.UserDao;
 
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.Random;
+import java.util.*;
 
 import static com.fate.util.MapUtils.*;
 import static lemocclient.Lemocclient.ARPGList;
 
 public class FateUtils {
     static DataDao dDao =new DataDao();
-    static UserDao sqlDao =new UserDao();
+
+
+    public static HashMap<String,String> splitMsg(String msg){
+        HashMap<String,String> map = new HashMap<>();
+        String comder;
+        String value = null;
+        String ordinal =null;
+        //&#91;='['
+        //&#93;=']'
+        if(msg.contains("&#91;")) {
+            ordinal=msg.substring(msg.indexOf("&#91;")+5,msg.indexOf("&#93;"));
+            String fMsg = msg.substring(0,msg.indexOf("&#91;"));
+            String lMsg = msg.substring(msg.indexOf("&#93;")+5);
+            msg = fMsg+lMsg;
+        }
+        if (msg.contains(".")) {
+            comder = msg.substring(0, msg.indexOf("."));
+            value = msg.substring(msg.indexOf(".") + 1);
+        } else if (msg.contains("。")) {
+            if (msg.toCharArray()[msg.length() - 1] != '。') {
+                comder = msg.substring(0, msg.indexOf("。"));
+                value = msg.substring(msg.indexOf("。") + 1);
+            } else {
+                comder = msg.substring(0, msg.indexOf("。"));
+                value = null;
+            }
+        } else {
+            comder = msg;
+        }
+        comder = reAllSpace(comder);
+        if(value != null){
+            value = reSpace(value);
+        }
+        map.put("value",value);
+        map.put("comder",comder);
+        map.put("ordinal",ordinal);
+        return map;
+    }
     public static String groupMsg(String groupid,String msg){
         return "{\"act\": \"101\", \"groupid\": \"" + groupid + "\", \"msg\":\"" + msg + "\"}";
     }
