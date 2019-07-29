@@ -1,0 +1,2 @@
+# fateDoll
+基于酷Qlemocclient插件的跑团用命运规则骰子姬
