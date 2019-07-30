@@ -17,18 +17,18 @@ public class PublicOrderImpl {
         QQuser a = getARPGUserByUser(u);
         if(value!=null){
             u.setUserName(value);
-            sqlDao.saveName(value,u,"QQ");
+            uSv.saveName(value,u,"QQ");
             if(a!=null){
                 a.setUserName(value);
-                sqlDao.saveName(value,u,myDice.getState());
+                uSv.saveName(value,u,myDice.getState());
             }
             return groupMsg(u.getUsergroup(),u.getUserOldName()+"更改名字为："+u.getUserName());
         }else{
             u.setUserName(u.getUserOldName());
-            sqlDao.saveName(u.getUserOldName(),u,"QQ");
+            uSv.saveName(u.getUserOldName(),u,"QQ");
             if(a!=null){
                 a.setUserName(u.getUserOldName());
-                sqlDao.saveName(u.getUserOldName(),u,myDice.getState());
+                uSv.saveName(u.getUserOldName(),u,myDice.getState());
             }
             return groupMsg(u.getUsergroup(),u.getUserOldName()+"已恢复原名");
         }
@@ -66,12 +66,12 @@ public class PublicOrderImpl {
         StringBuilder sbd = new StringBuilder();
         if(value!=null&&u.getUserID().equals("553859318")) {
             value = reAllSpace(value);
-            QQuser u2 = sqlDao.getUserByUser(new QQuser(value, u.getUsergroup()));
+            QQuser u2 = uSv.getUserByUser(new QQuser(value, u.getUsergroup()));
             if (u2 != null&&ARPGList.indexOf(u2)==-1) {
                 ARPGList.add(u2);
                 sbd.append("添加参团角色完成");
-                System.out.println(u2);
-                sqlDao.addQQuser(u2,myDice.getState());
+                System.out.println("u2"+u2);
+                uSv.addQQuser(u2,myDice.getState());
             } else {
                 sbd.append("出错了！");
             }
@@ -83,9 +83,9 @@ public class PublicOrderImpl {
     public static String fatedbLink(QQuser u) {
         if(u.getUserID().equals("553859318")){
             groupList = new ArrayList<>();
-            groupList = sqlDao.allQQuser("QQ");
+            groupList = uSv.getUserList("QQ");
             ARPGList = new ArrayList<>();
-            ARPGList = sqlDao.allQQuser(myDice.getState());
+            ARPGList = uSv.getUserList(myDice.getState());
             uList = new ArrayList<>();
             uList = uDao.loadUnits();
             return groupMsg(u.getUsergroup(),"与数据库同步成功");
@@ -183,9 +183,9 @@ public class PublicOrderImpl {
                 default:
                     return groupMsg(u.getUsergroup(), "模式错误！");
             }
-            sqlDao.saveDiceState(value);
-            myDice = sqlDao.diceLoad();
-            ARPGList = sqlDao.allQQuser(myDice.getState());
+            diceSV.saveDiceState(value);
+            myDice = diceSV.diceLoad();
+            ARPGList = uSv.getUserList(myDice.getState());
         }else{
             sbd.append("您没有权限这么做！");
         }
@@ -213,7 +213,7 @@ public class PublicOrderImpl {
             }
             map.put("Date",getTodayDate());
             u.setUserData(map);
-            sqlDao.saveData(map,u,"QQ");
+            uSv.saveData(map,u,"QQ");
             sbd.append("在一百次的命运中，").append(u.getUserName()).
                     append("得到了").append(dollNum[2]).append("次的‘1’").
                     append(dollNum[1]).append("次的‘0’与").append(dollNum[0]).

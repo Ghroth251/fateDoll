@@ -27,12 +27,13 @@ import org.java_websocket.drafts.Draft;
 import org.java_websocket.drafts.Draft_17;
 import org.java_websocket.handshake.ServerHandshake;
 
-import com.fate.dao.UserDao;
+import com.fate.Dao.UserDao;
 import com.fate.controller.FateController;
 import com.fate.bean.QQuser;
 
 import javafx.application.Platform;
 
+import static com.fate.util.StaticObjectUtils.*;
 import static lemocclient.Lemocclient.*;
 
 //https://bitbucket.org/jmarsden/jsonij/wiki/Home
@@ -99,7 +100,7 @@ public class FXMLDocumentController implements Initializable {
 							if((groupList.indexOf(new QQuser(QQ,groupID))) == -1){
 								String userName = String.format("%s", json.get("username"));
 								groupList.add(new QQuser(QQ,userName,groupID,userName));
-								sqlDao.addQQuser(groupList.get(groupList.indexOf(new QQuser(QQ,groupID))),"QQ");
+								uSv.addQQuser(groupList.get(groupList.indexOf(new QQuser(QQ,groupID))),"QQ");
 							}
 							groupIndex = groupList.indexOf(new QQuser(QQ,groupID));
 							AppendToMsgList(msg);

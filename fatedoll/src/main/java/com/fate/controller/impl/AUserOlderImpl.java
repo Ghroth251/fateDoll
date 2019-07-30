@@ -15,7 +15,7 @@ import static com.fate.util.FateUtils.*;
 import static com.fate.util.MapUtils.mapLoad;
 import static com.fate.util.StaticObjectUtils.*;
 import static com.fate.util.StaticObjectUtils.dDao;
-import static com.fate.util.StaticObjectUtils.sqlDao;
+import static com.fate.util.StaticObjectUtils.uSv;
 import static com.fate.util.StaticObjectUtils.uDao;
 import static lemocclient.Lemocclient.groupList;
 import static lemocclient.Lemocclient.myDice;
@@ -164,8 +164,8 @@ public class AUserOlderImpl {
             }
             u.setUserAttribute(L2);
             u.setUserData(L3);
-            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
-            sqlDao.saveAtt(u.getUserAttributeMap(), u);
+            uSv.saveData(u.getUserDataMap(), u,myDice.getState());
+            uSv.saveAtt(u.getUserAttributeMap(), u);
             sbd.append("导卡成功！");
         }else{
             sbd.append("导卡指令错误！");
@@ -307,7 +307,7 @@ public class AUserOlderImpl {
                 name = reAllSpace(name);
                 h.put(new Item(name,weight,price),(val==0)?1:val);
                 u.setUserItem(h);
-                sqlDao.saveItem(u.getUserItemMap(), u);
+                uSv.saveItem(u.getUserItemMap(), u);
                 return groupMsg(u.getUsergroup(),"新增物品-"+name+"成功！");
             }else{
                 String key = value.substring(0,value.indexOf(","));
@@ -315,7 +315,7 @@ public class AUserOlderImpl {
                 key = reAllSpace(key);
                 h.put(new Item(key,0,0),(val==0)?1:val);
                 u.setUserItem(h);
-                sqlDao.saveItem(u.getUserItemMap(), u);
+                uSv.saveItem(u.getUserItemMap(), u);
                 return groupMsg(u.getUsergroup(),"新增物品-"+key+"成功！");
             }
         }else{
@@ -340,7 +340,7 @@ public class AUserOlderImpl {
         val = reflSpace(val);
         if(u.getUserDataMap()!=null&&u.getUserDataMap().get(key)!=null){
             u.setUserData(key,val);
-            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
+            uSv.saveData(u.getUserDataMap(), u,myDice.getState());
             return groupMsg(u.getUsergroup(),"修改成功");
         }else{
             return groupMsg(u.getUsergroup(),"未找到修改项属性");
@@ -413,7 +413,7 @@ public class AUserOlderImpl {
                 values = values.substring(values.indexOf("|")+1);
             }
             u.setUserData(h);
-            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
+            uSv.saveData(u.getUserDataMap(), u,myDice.getState());
             return groupMsg(u.getUsergroup(),u.getUserName()+"的属性保存成功！");
         }else{
             return groupMsg(u.getUsergroup(),"请输入要设置的属性哦，格式setnew.xxx:vvv|xxx:vvv...");

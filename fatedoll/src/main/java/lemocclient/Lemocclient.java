@@ -7,9 +7,9 @@ package lemocclient;
 
 import java.util.ArrayList;
 
-import com.fate.dao.DataDao;
-import com.fate.dao.UserDao;
-import com.fate.dao.UnitsDao;
+import com.fate.Dao.DataDao;
+import com.fate.Dao.UserDao;
+import com.fate.Dao.UnitsDao;
 import com.fate.bean.DataMsg;
 import com.fate.bean.Dice;
 import com.fate.bean.QQuser;
@@ -23,6 +23,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import static com.fate.util.StaticObjectUtils.*;
+
 /**
 *
 * @author noname
@@ -33,10 +35,8 @@ public class Lemocclient extends Application {
     public static ArrayList<QQuser> ARPGList = new ArrayList<>();
 	public static ArrayList<Unit> uList = new ArrayList<>();
 	public static ArrayList<DataMsg> dList = new ArrayList<>();
-	static UserDao sqlDao = new UserDao();
-	public static Dice myDice = sqlDao.diceLoad();
-	static UnitsDao uDao = new UnitsDao();
-	static DataDao dDao = new DataDao();
+	public static Dice myDice = diceSV.diceLoad();
+
 	@Override
     public void start(Stage stage) throws Exception {
        // Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -69,9 +69,9 @@ public class Lemocclient extends Application {
 
     public static void main(String[] args){
     	//groupList = IOUtils.readQQuser();
- //   	myDice = sqlDao.diceLoad();
-    	groupList = sqlDao.allQQuser("QQ");
-    	ARPGList =  sqlDao.allQQuser(myDice.getState());
+ //   	myDice = uSv.diceLoad();
+    	groupList = uSv.getUserList("QQ");
+    	ARPGList =  uSv.getUserList(myDice.getState());
     	uList = uDao.loadUnits();
     	dList = dDao.datafind(null,null);
 

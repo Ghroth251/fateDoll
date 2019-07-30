@@ -1,7 +1,5 @@
-package com.fate.dao;
+package com.fate.Dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
@@ -23,7 +21,7 @@ public class UserDao extends BaseDao {
     private static EntityTransaction tx = null;
 
     @SuppressWarnings("unchecked")
-    public ArrayList<QQuser> allQQuser(String table) {
+    public ArrayList<QQuser> getUserList(String table) {
         ArrayList<QQuser> custList= new ArrayList<>();
         try {
             //获取实体管理对象
@@ -75,33 +73,21 @@ public class UserDao extends BaseDao {
         }
         return u2;
     }
-    public Dice diceLoad() {
-        String sql = "select * from dice where id = 1";
-        Object[] parms = {};
-        Dice d = null;
-        ResultSet rs = this.myexecuteQuery(sql, parms);
+    public void cuUser(QQuser A) {
         try {
-            while(rs.next()) {
-                String name=rs.getString(2);
-                String shortName=rs.getString(3);
-                String code=rs.getString(4);
-                String State=rs.getString(5);
-                d = new Dice(name, shortName, code, State);
-            }
-        } catch (SQLException e) {
+            em = JPAUtil.getEntityManager();
+            tx = em.getTransaction();
+            tx.begin();
+            em.merge(A);
+            tx.commit();
+        } catch (Exception e) {
+            // 回滚事务
+            tx.rollback();
             e.printStackTrace();
         } finally {
-            this.closConn();
+            // 释放资源
+            em.close();
         }
-        return d;
-    }
-
-    public void addQQuser(QQuser A,String table) {
-        A.setId(0);
-        A.setUjoinstate(table);
-        em = JPAUtil.getEntityManager();
-        QQuser q = em.merge(A);
-        System.out.println("q" + q);
     }
     public void saveName(String name, QQuser u,String table){
         String sql = "update " + table +
@@ -139,9 +125,5 @@ public class UserDao extends BaseDao {
 //		Object[] params = { val,u.getUserID(),u.getUsergroup() };
 //		return this.myexecuteUpdate(sql.toString(), params);
 //	}
-    public void saveDiceState(String State){
-        Object[] params = { State};
-        this.myexecuteUpdate("update dice set state=?", params);
-    }
 
 }

@@ -50,9 +50,17 @@ public class QQuser implements Serializable{
 		this.usergroup = usergroup;
 	}
 
+	public QQuser(String userID, String userName, String userOldName, String usergroup, String ujoinstate) {
+		this.userID = userID;
+		this.userName = userName;
+		this.userOldName = userOldName;
+		this.usergroup = usergroup;
+		this.ujoinstate = ujoinstate;
+	}
+
 	public QQuser(String userID, String userName, String userOldName, String usergroup,
-			String userAttribute, String userData,
-			String userItem, String userEquip) {
+				  String userAttribute, String userData,
+				  String userItem, String userEquip) {
 		super();
 		this.userID = userID;
 		this.userName = userName;
@@ -63,6 +71,21 @@ public class QQuser implements Serializable{
 		this.userItem = userItem;
 		this.userEquip = userEquip;
 	}
+    public QQuser(int id,String userID, String userName, String userOldName, String usergroup,
+                  String userAttribute, String userData,
+                  String userItem, String userEquip,String ujoinstate) {
+        super();
+        this.id= id;
+        this.userID = userID;
+        this.userName = userName;
+        this.userOldName = userOldName;
+        this.usergroup = usergroup;
+        this.userData = userData;
+        this.userAttribute = userAttribute;
+        this.userItem = userItem;
+        this.userEquip = userEquip;
+        this.ujoinstate = ujoinstate;
+    }
 	public String getUjoinstate() {
 		return ujoinstate;
 	}

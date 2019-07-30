@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.Random;
 
 import static com.fate.util.FateUtils.groupMsg;
-import static com.fate.util.StaticObjectUtils.sqlDao;
+import static com.fate.util.StaticObjectUtils.uSv;
 import static lemocclient.Lemocclient.myDice;
 
 public class MfOrderImpl {
@@ -109,7 +109,7 @@ public class MfOrderImpl {
             L.put("水元素", inborn[6]+"%");
             L.put("金元素", inborn[7]+"%");
             u.setUserData(L);
-            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
+            uSv.saveData(u.getUserDataMap(), u,myDice.getState());
             return groupMsg(u.getUsergroup(),sbd.toString());
         }else{
             return groupMsg(u.getUsergroup(),"已经测过资质啦，不能重复测试。");

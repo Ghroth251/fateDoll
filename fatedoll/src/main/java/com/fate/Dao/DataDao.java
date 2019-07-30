@@ -1,4 +1,4 @@
-package com.fate.dao;
+package com.fate.Dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

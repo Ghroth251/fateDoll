@@ -2,15 +2,14 @@ package com.fate.util;
 
 import com.fate.bean.DataMsg;
 import com.fate.bean.QQuser;
-import com.fate.dao.DataDao;
-import com.fate.dao.UserDao;
+import com.fate.Dao.DataDao;
 
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.fate.util.MapUtils.*;
 import static lemocclient.Lemocclient.ARPGList;
+import static lemocclient.Lemocclient.groupList;
 
 public class FateUtils {
     static DataDao dDao =new DataDao();
@@ -188,6 +187,12 @@ public class FateUtils {
     }
     public static QQuser getARPGUserByUser(QQuser u){
         int aIndex = ARPGList.indexOf(u);
+//        for(QQuser u1:ARPGList){
+//            System.out.println(u1);
+//        }
+//        for(QQuser u2:groupList){
+//            System.out.println(u2);
+//        }
         QQuser a = null;
         if(aIndex!=-1){
             a = ARPGList.get(aIndex);
@@ -216,7 +221,7 @@ public class FateUtils {
 //        }
 //        map.put("Date",getTodayDate());
 //        u.setUserData(map);
-//        sqlDao.saveData(map,u,"QQ");
+//        uSv.saveData(map,u,"QQ");
 //        return dollNum;
 //    }
 }

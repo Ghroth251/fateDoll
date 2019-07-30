@@ -29,7 +29,6 @@ public class FateController {
         HashMap<String,String> orderMap= splitMsg(msg);
         QQuser a = getARPGUserByUser(u);
         return OrderList(u,a,orderMap);
-
     }
     private static String OrderList(QQuser u,QQuser a,HashMap<String,String> orderMap) {
         String returnMsg = null;
@@ -37,7 +36,7 @@ public class FateController {
             if(a!=null){
                 returnMsg = aUserOrderList(a,orderMap);
             }
-            returnMsg = returnMsg==null?publicOrderList(a,orderMap):returnMsg;
+            returnMsg = returnMsg==null?publicOrderList(u,orderMap):returnMsg;
         }else if(orderMap.get("comder").equals("Fon")){
             returnMsg = fon(u, orderMap.get("value"));
         }

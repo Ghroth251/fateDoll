@@ -1,7 +1,14 @@
 package com.fate.bean;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "dice") //建立实体类和表的映射关系
 public class Dice {
 
+	@Id//声明当前私有属性为主键
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //配置主键的生成策略
+	private int id;
 	private String name;
 	private String shortName;
 	private String code;
@@ -16,6 +23,20 @@ public class Dice {
 		this.shortName = shortName;
 		this.code = code;
 		this.State = State;
+	}
+	public Dice(int id,String name, String shortName, String code, String State) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.shortName = shortName;
+		this.code = code;
+		this.State = State;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;

@@ -1,4 +1,4 @@
-package com.fate.dao;
+package com.fate.Dao;
 
 import com.fate.bean.Mecha;
 import com.fate.util.BaseDao;

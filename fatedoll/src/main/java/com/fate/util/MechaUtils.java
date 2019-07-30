@@ -2,7 +2,7 @@ package com.fate.util;
 
 import com.fate.bean.Mecha;
 import com.fate.bean.QQuser;
-import com.fate.dao.MechaDao;
+import com.fate.Dao.MechaDao;
 
 import java.util.LinkedHashMap;
 import java.util.Set;
