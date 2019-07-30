@@ -7,28 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46ca3a3c-cfcf-4813-98bf-0b75d4530386" name="Default" comment="将user模块试用git">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Dao/DiceDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Service/DiceService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Service/UserService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Service/impl/DiceServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Service/impl/UserServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/bean/Dice.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/bean/Dice.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/bean/QQuser.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/bean/QQuser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/AUserOlderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/AUserOlderImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/MfOrderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/MfOrderImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/PublicOrderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/controller/impl/PublicOrderImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/dao/DataDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Dao/DataDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/dao/MechaDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Dao/MechaDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/dao/UnitsDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Dao/UnitsDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/Dao/UserDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/util/FateUtils.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/util/MechaUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/util/MechaUtils.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fate/util/StaticObjectUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/fate/util/StaticObjectUtils.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java" afterPath="$PROJECT_DIR$/src/main/java/lemocclient/FXMLDocumentController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lemocclient/Lemocclient.java" afterPath="$PROJECT_DIR$/src/main/java/lemocclient/Lemocclient.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/fate/bean/Dice.class" afterPath="$PROJECT_DIR$/target/classes/com/fate/bean/Dice.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/fate/bean/QQuser.class" afterPath="$PROJECT_DIR$/target/classes/com/fate/bean/QQuser.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/fate/controller/FateController.class" afterPath="$PROJECT_DIR$/target/classes/com/fate/controller/FateController.class" />
@@ -160,8 +140,8 @@
       <file leaf-file-name="FateController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="314">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="method#groupOrder#0;class#FateController#0" expanded="false" />
                 <element signature="method#OrderList#0;class#FateController#0" expanded="false" />
@@ -675,7 +655,7 @@
       <workItem from="1564451726008" duration="8553000" />
       <workItem from="1564466785618" duration="10225000" />
       <workItem from="1564479027832" duration="45000" />
-      <workItem from="1564479083471" duration="530000" />
+      <workItem from="1564479083471" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="将user模块试用git">
       <created>1564467610857</created>
@@ -684,11 +664,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564467610857</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="初步换用JPA，小调结构">
+      <created>1564479661141</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564479661141</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149068000" />
+    <option name="totallyTimeSpent" value="149120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -701,6 +688,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -717,7 +705,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21321961" sideWeight="0.50869566" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2196162" sideWeight="0.49130434" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2196162" sideWeight="0.49130434" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21321961" sideWeight="0.50869566" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -743,7 +731,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="将user模块试用git" />
-    <option name="LAST_COMMIT_MESSAGE" value="将user模块试用git" />
+    <MESSAGE value="初步换用JPA，小调结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步换用JPA，小调结构" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1166,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fate/controller/FateController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="314">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="method#groupOrder#0;class#FateController#0" expanded="false" />
             <element signature="method#OrderList#0;class#FateController#0" expanded="false" />
