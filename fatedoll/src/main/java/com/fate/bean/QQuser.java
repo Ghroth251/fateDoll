@@ -1,22 +1,31 @@
 package com.fate.bean;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 
+import static com.fate.util.MapUtils.*;
+
+@Entity
+@Table(name = "QQuser") //建立实体类和表的映射关系
 public class QQuser implements Serializable{
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -677496801593907189L;
-	
+
+
+	@Id//声明当前私有属性为主键
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //配置主键的生成策略
+	@Column(name = "key") //指定和表中cust_id字段的映射关系
+	private int id;
 	private String userID;
 	private String userName;
 	private String userOldName;
 	private String usergroup;
-	private LinkedHashMap<String,Object> userAttribute;
-	private LinkedHashMap<String,Object> userData;
-	private LinkedHashMap<Item,Integer> userItem;
-	private LinkedHashMap<String,Object> userEquip;
+	private String userAttribute;
+	private String userData;
+	private String userItem;
+	private String userEquip;
+	private String ujoinstate;
 	public QQuser() {
 		super();
 		// TODO 自动生成的构造函数存根
@@ -32,7 +41,7 @@ public class QQuser implements Serializable{
 		this.userName = userName;
 		this.usergroup = usergroup;
 	}
-	
+
 	public QQuser(String userID, String userName, String usergroup, String userOldName) {
 		super();
 		this.userID = userID;
@@ -42,8 +51,8 @@ public class QQuser implements Serializable{
 	}
 
 	public QQuser(String userID, String userName, String userOldName, String usergroup,
-			LinkedHashMap<String, Object> userAttribute, LinkedHashMap<String, Object> userData,
-			LinkedHashMap<Item, Integer> userItem, LinkedHashMap<String, Object> userEquip) {
+			String userAttribute, String userData,
+			String userItem, String userEquip) {
 		super();
 		this.userID = userID;
 		this.userName = userName;
@@ -53,6 +62,18 @@ public class QQuser implements Serializable{
 		this.userAttribute = userAttribute;
 		this.userItem = userItem;
 		this.userEquip = userEquip;
+	}
+	public String getUjoinstate() {
+		return ujoinstate;
+	}
+	public void setUjoinstate(String ujoinstate) {
+		this.ujoinstate = ujoinstate;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getUserID() {
 		return userID;
@@ -78,37 +99,61 @@ public class QQuser implements Serializable{
 	public void setUserOldName(String userOldName) {
 		this.userOldName = userOldName;
 	}
-
-	public LinkedHashMap<String, Object> getUserData() {
+	public String getUserData() {
 		return userData;
 	}
-	public void setUserData(LinkedHashMap<String, Object> h) {
+	public void setUserData(String h) {
 		this.userData = h;
 	}
 	public void setUserData(String s,Object o) {
-		this.userData.put(s, o);
+		LinkedHashMap<String,Object> L1 = new LinkedHashMap<>();
+		L1.put(s, o);
+		this.userData = mapSave(L1);
 	}
-	
-	public LinkedHashMap<Item, Integer> getUserItem() {
+	public String getUserItem() {
 		return userItem;
 	}
-	public void setUserItem(LinkedHashMap<Item, Integer> userItem) {
+	public void setUserItem(String userItem) {
 		this.userItem = userItem;
 	}
-	
-	public LinkedHashMap<String, Object> getUserEquip() {
+	public String getUserEquip() {
 		return userEquip;
 	}
-	public void setUserEquip(LinkedHashMap<String, Object> userEquip) {
+	public void setUserEquip(String userEquip) {
 		this.userEquip = userEquip;
 	}
-	
-	public LinkedHashMap<String, Object> getUserAttribute() {
+	public String getUserAttribute() {
 		return userAttribute;
 	}
-	public void setUserAttribute(LinkedHashMap<String, Object> userAttribute) {
+	public void setUserAttribute(String userAttribute) {
 		this.userAttribute = userAttribute;
 	}
+
+	public LinkedHashMap<String,Object> getUserDataMap() {
+		return mapLoad(userData);
+	}
+	public void setUserData(LinkedHashMap<String,Object> h) {
+		this.userData = mapSave(h);
+	}
+	public LinkedHashMap<Item,Integer> getUserItemMap() {
+		return itemLoad(userItem);
+	}
+	public void setUserItem( LinkedHashMap<Item,Integer> userItem) {
+		this.userItem = itemSave(userItem);
+	}
+	public LinkedHashMap<String,Object> getUserEquipMap() {
+		return mapLoad(userEquip);
+	}
+	public void setUserEquip(LinkedHashMap<String,Object> userEquip) {
+		this.userEquip = mapSave(userEquip);
+	}
+	public LinkedHashMap<String,Object> getUserAttributeMap() {
+		return mapLoad(userAttribute);
+	}
+	public void setUserAttribute(LinkedHashMap<String,Object> userAttribute) {
+		this.userAttribute = mapSave(userAttribute);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -138,12 +183,20 @@ public class QQuser implements Serializable{
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
-		return "QQuser [userID=" + userID + ", userName=" + userName + ", userOldName=" + userOldName + ", usergroup="
-				+ usergroup + ", userData=" + userData + ", userAttribute=" + userAttribute + ", userItem=" + userItem
-				+ ", userEquip=" + userEquip + "]";
+		return "QQuser{" +
+				"id=" + id +
+				", userID='" + userID + '\'' +
+				", userName='" + userName + '\'' +
+				", userOldName='" + userOldName + '\'' +
+				", usergroup='" + usergroup + '\'' +
+				", userAttribute='" + userAttribute + '\'' +
+				", userData='" + userData + '\'' +
+				", userItem='" + userItem + '\'' +
+				", userEquip='" + userEquip + '\'' +
+				", ujoinstate='" + ujoinstate + '\'' +
+				'}';
 	}
-
-	
 }

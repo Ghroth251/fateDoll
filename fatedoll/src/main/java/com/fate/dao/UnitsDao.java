@@ -49,7 +49,7 @@ public class UnitsDao extends BaseDao{
 				if((i = Lemocclient.groupList.indexOf(new QQuser(U.getUserID(),U.getUsergroup()))) != -1){
 					QQuser Q = Lemocclient.groupList.get(i);
 					System.out.println(Q);
-					LinkedHashMap<String, Object> L = Q.getUserData();
+					LinkedHashMap<String, Object> L = Q.getUserDataMap();
 					L.put("生理压力", U.getuHp());
 					L.put("心理压力", U.getuSp());
 					L.put("魔法压力", U.getuMp()+"/"+U.getuMaxmp());

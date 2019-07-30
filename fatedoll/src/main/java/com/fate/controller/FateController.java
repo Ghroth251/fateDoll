@@ -32,15 +32,16 @@ public class FateController {
 
     }
     private static String OrderList(QQuser u,QQuser a,HashMap<String,String> orderMap) {
+        String returnMsg = null;
         if(fateState){
             if(a!=null){
-                return aUserOrderList(a,orderMap);
+                returnMsg = aUserOrderList(a,orderMap);
             }
-            return publicOrderList(a,orderMap);
+            returnMsg = returnMsg==null?publicOrderList(a,orderMap):returnMsg;
         }else if(orderMap.get("comder").equals("Fon")){
-            return fon(u, orderMap.get("value"));
+            returnMsg = fon(u, orderMap.get("value"));
         }
-        return null;
+        return returnMsg;
     }
     private static String aUserOrderList(QQuser a,HashMap<String,String> orderMap) {
         switch (orderMap.get("comder")) {

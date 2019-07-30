@@ -4,61 +4,74 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.Set;
 
 import com.fate.util.BaseDao;
 import com.fate.bean.Dice;
 import com.fate.bean.Item;
 import com.fate.bean.QQuser;
+import com.fate.util.JPAUtil;
 
-import static com.fate.util.MapUtils.mapLoad;
-import static com.fate.util.MapUtils.mapSave;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+
+import static com.fate.util.MapUtils.*;
 import static lemocclient.Lemocclient.myDice;
 
 public class UserDao extends BaseDao {
+    private static EntityManager em = null;
+    private static EntityTransaction tx = null;
+
+    @SuppressWarnings("unchecked")
     public ArrayList<QQuser> allQQuser(String table) {
-        ArrayList<QQuser> custList;
-        String sql = "select * from " + table +
-                "user";
-        Object[] parms = {};
-        custList = new ArrayList<>();
-        ResultSet rs = this.myexecuteQuery(sql, parms);
+        ArrayList<QQuser> custList= new ArrayList<>();
         try {
-            while(rs.next()) {
-                String userID=rs.getString(2);
-                String userName=rs.getString(3);
-                String userOldName=rs.getString(4);
-                String usergroup=rs.getString(5);
-                LinkedHashMap<String,Object> userAttribute=mapLoad(rs.getString(6));
-                LinkedHashMap<String,Object> userDate=mapLoad(rs.getString(7));
-                LinkedHashMap<Item,Integer> userItem=itemLoad(rs.getString(8));
-                LinkedHashMap<String,Object> userEquid=mapLoad(rs.getString(9));
-                custList.add(new QQuser(userID,userName,userOldName,usergroup,userAttribute,userDate,userItem,userEquid));
-            }
-        } catch (SQLException e) {
+            //获取实体管理对象
+            em = JPAUtil.getEntityManager();
+            //获取事务对象
+            tx = em.getTransaction();
+            tx.begin();
+            //创建query对象
+            String jpql = "from QQuser where ujoinstate like ?1 ";
+            Query query = em.createQuery(jpql);
+            //对占位符赋值，从1开始
+            query.setParameter(1,table);
+            //查询并得到返回结果
+            custList = (ArrayList<QQuser>) query.getResultList(); //得到唯一的结果集对象
+            tx.commit();
+        } catch (Exception e) {
+            // 回滚事务
+            tx.rollback();
             e.printStackTrace();
         } finally {
-            this.closConn();
+            // 释放资源
+            em.close();
         }
         return custList;
     }
     public QQuser getUserByUser(QQuser u) {
         QQuser u2=null;
-        String sql = "select * from QQuser where userID like ? and usergroup=?";
-        Object[] parms = {u.getUserID(), u.getUsergroup()};
-        ResultSet rs = this.myexecuteQuery(sql, parms);
         try {
-            while (rs.next()) {
-                String userID = rs.getString(2);
-                String userName = rs.getString(3);
-                String userOldName = rs.getString(4);
-                String usergroup = rs.getString(5);
-                u2 = new QQuser(userID,userName,userOldName,usergroup,null,null,null,null);
-            }
-        } catch (SQLException e) {
+            //获取实体管理对象
+            em = JPAUtil.getEntityManager();
+            //获取事务对象
+            tx = em.getTransaction();
+            tx.begin();
+            //创建query对象
+            String jpql = "from QQuser where userID like ?1 ";
+            Query query = em.createQuery(jpql);
+            //对占位符赋值，从1开始
+            query.setParameter(1,u.getUserID());
+            Object obj = query.getSingleResult();
+            u2 = (QQuser)obj;
+            tx.commit();
+        }catch (Exception e) {
+            // 回滚事务
+            tx.rollback();
             e.printStackTrace();
         } finally {
-            this.closConn();
+            // 释放资源
+            em.close();
         }
         return u2;
     }
@@ -82,46 +95,13 @@ public class UserDao extends BaseDao {
         }
         return d;
     }
-    private static LinkedHashMap<Item,Integer> itemLoad(String value) {
-        LinkedHashMap<Item,Integer>  h = new LinkedHashMap<>();
-        if(value!=null){
-            String values = value;
-            while(values.contains("|")){
-                String key = values.substring(0,values.indexOf(":"));
-                int val = Integer.valueOf(values.substring(values.indexOf(":")+1,values.indexOf("|")));
-                String name = key.substring(0,key.indexOf("-"));
-                key = key.substring(key.indexOf("-")+1);
-                int weight = Integer.valueOf(key.substring(0,key.indexOf("-")));
-                key = key.substring(key.indexOf("-")+1);
-                int price = Integer.valueOf(key);
-                h.put(new Item(name,weight,price),val);
-                values = values.substring(values.indexOf("|")+1);
-            }
-            return h;
-        }
-        return null;
-    }
-    private static String itemSave(LinkedHashMap<Item, Integer> L) {
-        StringBuilder sbd = new StringBuilder();
-        if(L!=null){
-            Set<Item> keySet = L.keySet();
-            for (Item key : keySet) {
-                int val = L.get(key);
-                sbd.append(key.getItemName()).
-                        append("-").append(key.getItemWeight()).
-                        append("-").append(key.getItemprice()).
-                        append(":").append(val).append("|");
-            }
-            return sbd.toString();
-        }
-        return null;
-    }
+
     public void addQQuser(QQuser A,String table) {
-        String sql = "insert into " + table +
-                "user(userID,userName,userOldName,usergroup,userData) values (?,?,?,?,?);";
-        String userData = mapSave(A.getUserData());
-        Object[] params = {A.getUserID(),A.getUserName(),A.getUserOldName(),A.getUsergroup(),userData};
-        this.myexecuteUpdate(sql, params);
+        A.setId(0);
+        A.setUjoinstate(table);
+        em = JPAUtil.getEntityManager();
+        QQuser q = em.merge(A);
+        System.out.println("q" + q);
     }
     public void saveName(String name, QQuser u,String table){
         String sql = "update " + table +

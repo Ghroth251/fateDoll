@@ -67,9 +67,10 @@ public class PublicOrderImpl {
         if(value!=null&&u.getUserID().equals("553859318")) {
             value = reAllSpace(value);
             QQuser u2 = sqlDao.getUserByUser(new QQuser(value, u.getUsergroup()));
-            if (u2 != null&& 	ARPGList.indexOf(u2)==-1) {
+            if (u2 != null&&ARPGList.indexOf(u2)==-1) {
                 ARPGList.add(u2);
                 sbd.append("添加参团角色完成");
+                System.out.println(u2);
                 sqlDao.addQQuser(u2,myDice.getState());
             } else {
                 sbd.append("出错了！");
@@ -192,8 +193,8 @@ public class PublicOrderImpl {
     }
     public static String jrrp(QQuser u) {
         StringBuilder sbd = new StringBuilder();
-        LinkedHashMap<String,Object> map = u.getUserData()==null?
-                new LinkedHashMap<>():u.getUserData();
+        LinkedHashMap<String,Object> map = u.getUserDataMap()==null?
+                new LinkedHashMap<>():u.getUserDataMap();
         if(map.get("Date")==null||!map.get("Date").equals(getTodayDate())){
             int[] doll = fateArray(100);
             int[] dollNum = new int[3];

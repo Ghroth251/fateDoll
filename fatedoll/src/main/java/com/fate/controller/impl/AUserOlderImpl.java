@@ -83,8 +83,8 @@ public class AUserOlderImpl {
                 }
             }
             int sVal;
-            if(u.getUserAttribute().get(val)!=null){
-                sVal = Integer.parseInt(u.getUserAttribute().get(val).toString())+(u.getUserAttribute().get(val+"X")==null?0:Integer.parseInt(u.getUserAttribute().get(val+"X").toString()));
+            if(u.getUserAttributeMap().get(val)!=null){
+                sVal = Integer.parseInt(u.getUserAttributeMap().get(val).toString())+(u.getUserAttributeMap().get(val+"X")==null?0:Integer.parseInt(u.getUserAttributeMap().get(val+"X").toString()));
                 sVal += num;
                 sbd.append(sVal);
                 if(sent!=null){
@@ -164,8 +164,8 @@ public class AUserOlderImpl {
             }
             u.setUserAttribute(L2);
             u.setUserData(L3);
-            sqlDao.saveData(u.getUserData(), u,myDice.getState());
-            sqlDao.saveAtt(u.getUserAttribute(), u);
+            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
+            sqlDao.saveAtt(u.getUserAttributeMap(), u);
             sbd.append("导卡成功！");
         }else{
             sbd.append("导卡指令错误！");
@@ -295,7 +295,7 @@ public class AUserOlderImpl {
     }
     public static String addItem(QQuser u, String value) {
         if(value!=null){
-            LinkedHashMap<Item,Integer>  h = (u.getUserItem()==null)? new LinkedHashMap<>():u.getUserItem();
+            LinkedHashMap<Item,Integer>  h = (u.getUserItemMap()==null)? new LinkedHashMap<>():u.getUserItemMap();
             if(value.contains("-")){
                 String key = value.substring(0,value.indexOf(","));
                 int val = Integer.valueOf(value.substring(value.indexOf(",")+1));
@@ -307,7 +307,7 @@ public class AUserOlderImpl {
                 name = reAllSpace(name);
                 h.put(new Item(name,weight,price),(val==0)?1:val);
                 u.setUserItem(h);
-                sqlDao.saveItem(u.getUserItem(), u);
+                sqlDao.saveItem(u.getUserItemMap(), u);
                 return groupMsg(u.getUsergroup(),"新增物品-"+name+"成功！");
             }else{
                 String key = value.substring(0,value.indexOf(","));
@@ -315,7 +315,7 @@ public class AUserOlderImpl {
                 key = reAllSpace(key);
                 h.put(new Item(key,0,0),(val==0)?1:val);
                 u.setUserItem(h);
-                sqlDao.saveItem(u.getUserItem(), u);
+                sqlDao.saveItem(u.getUserItemMap(), u);
                 return groupMsg(u.getUsergroup(),"新增物品-"+key+"成功！");
             }
         }else{
@@ -338,9 +338,9 @@ public class AUserOlderImpl {
     public static String set(QQuser u, String key,String val) {
         key = reflSpace(key);
         val = reflSpace(val);
-        if(u.getUserData()!=null&&u.getUserData().get(key)!=null){
+        if(u.getUserDataMap()!=null&&u.getUserDataMap().get(key)!=null){
             u.setUserData(key,val);
-            sqlDao.saveData(u.getUserData(), u,myDice.getState());
+            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
             return groupMsg(u.getUsergroup(),"修改成功");
         }else{
             return groupMsg(u.getUsergroup(),"未找到修改项属性");
@@ -353,9 +353,9 @@ public class AUserOlderImpl {
         if(value!=null){
             int index;
             if((index = groupList.indexOf(new QQuser(value,u.getUsergroup()))) != -1){
-                Set<String> keySet = groupList.get(index).getUserData().keySet();
+                Set<String> keySet = groupList.get(index).getUserDataMap().keySet();
                 for (String key : keySet) {
-                    Object val = groupList.get(index).getUserData().get(key);
+                    Object val = groupList.get(index).getUserDataMap().get(key);
                     sbd.append(key).append(":\\t").append(val).append("\\n");//+"\n"
                 }
                 return groupMsg(u.getUsergroup(),groupList.get(index).getUserName()+"的属性为：\\n"+sbd.toString());
@@ -363,28 +363,28 @@ public class AUserOlderImpl {
                 return groupMsg(u.getUsergroup(),"该QQ在本群的人物不存在哦！");
             }
         }else{
-            if(u.getUserData()!=null){
-                Set<String> keySet = u.getUserData().keySet();
+            if(u.getUserDataMap()!=null){
+                Set<String> keySet = u.getUserDataMap().keySet();
                 for (String key : keySet) {
-                    Object val = u.getUserData().get(key);
+                    Object val = u.getUserDataMap().get(key);
                     sbd.append(key).append(":\\t").append(val).append("\\n");
                 }
                 sbd.append("装备为："+"\\n");
-                Set<String> keySet3 = u.getUserEquip().keySet();
-                if(u.getUserEquip()!=null){
+                Set<String> keySet3 = u.getUserEquipMap().keySet();
+                if(u.getUserEquipMap()!=null){
                     for (String key : keySet3) {
-                        Object val = u.getUserEquip().get(key);
+                        Object val = u.getUserEquipMap().get(key);
                         sbd.append(key).append(":\\t").append(val).append("\\n");
                     }
                 }
-                if(u.getUserItem()!=null){
-                    Set<Item> keySet2 = u.getUserItem().keySet();
+                if(u.getUserItemMap()!=null){
+                    Set<Item> keySet2 = u.getUserItemMap().keySet();
                     sbd.append("持有的物品为："+"\\n");
                     sbd.append("物品名"+ "\\t" + "重量"+ "\\t" + "价格"+ "\\t" + "数量"+"\\n");
                     int sumW = 0;
                     int sumP = 0;
                     for (Item key : keySet2) {
-                        int val = u.getUserItem().get(key);
+                        int val = u.getUserItemMap().get(key);
                         sbd.append(key.getItemName()).append("\\t").append(key.getItemWeight()).append("kg\\t").append(key.getItemprice()).append("G\\t").append(val).append("\\n");
                         sumW+=key.getItemWeight()*val;
                         sumP+=key.getItemprice()*val;
@@ -413,7 +413,7 @@ public class AUserOlderImpl {
                 values = values.substring(values.indexOf("|")+1);
             }
             u.setUserData(h);
-            sqlDao.saveData(u.getUserData(), u,myDice.getState());
+            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
             return groupMsg(u.getUsergroup(),u.getUserName()+"的属性保存成功！");
         }else{
             return groupMsg(u.getUsergroup(),"请输入要设置的属性哦，格式setnew.xxx:vvv|xxx:vvv...");

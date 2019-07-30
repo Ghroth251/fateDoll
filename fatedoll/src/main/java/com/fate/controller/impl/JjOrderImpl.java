@@ -49,7 +49,7 @@ public class JjOrderImpl {
                 sbd.append("你尚未绑定机甲");
                 return groupMsg(a.getUsergroup(), sbd.toString());
             }else{
-                userAvo = getUserAvo(a.getUserAttribute());
+                userAvo = getUserAvo(a.getUserAttributeMap());
                 mechaAvo = getMechaAvo(mecha.getmMo(),mecha.getmSe());
                 avoerName = a.getUserName();
             }
@@ -165,7 +165,7 @@ public class JjOrderImpl {
                 sbd.append("你尚未绑定机甲");
                 return groupMsg(u.getUsergroup(), sbd.toString());
             }
-            attMap = u.getUserAttribute();
+            attMap = u.getUserAttributeMap();
             atkUnitName = u.getUserName();
             System.out.println("weaponName "+ weaponName);
             if (weaponName.toCharArray()[0] > '9') {

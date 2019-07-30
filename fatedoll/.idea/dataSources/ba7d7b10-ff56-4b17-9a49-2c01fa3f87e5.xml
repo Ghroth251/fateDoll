@@ -863,352 +863,503 @@
     <table id="221" parent="7" name="mecha">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="222" parent="7" name="mfdata">
+    <table id="222" parent="7" name="mechalib">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="223" parent="7" name="mfuser">
+    <table id="223" parent="7" name="mfdata">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="224" parent="217" name="id">
+    <table id="224" parent="7" name="mfuser">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="225" parent="7" name="qquser">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="226" parent="217" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="225" parent="217" name="name">
+    <column id="227" parent="217" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="217" name="shortName">
+    <column id="228" parent="217" name="shortName">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="227" parent="217" name="code">
+    <column id="229" parent="217" name="code">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="217" name="state">
+    <column id="230" parent="217" name="state">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <DefaultExpression>&apos;mf&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="229" parent="217" name="PRIMARY">
+    <key id="231" parent="217" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="230" parent="218" name="id">
+    <column id="232" parent="218" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="218" name="name">
+    <column id="233" parent="218" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="218" name="hp">
+    <column id="234" parent="218" name="hp">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="218" name="sp">
+    <column id="235" parent="218" name="sp">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="218" name="mp">
+    <column id="236" parent="218" name="mp">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="218" name="maxmp">
+    <column id="237" parent="218" name="maxmp">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="218" name="type">
+    <column id="238" parent="218" name="type">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="218" name="fromUser">
+    <column id="239" parent="218" name="fromUser">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="218" name="userID">
+    <column id="240" parent="218" name="userID">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="218" name="usergroup">
+    <column id="241" parent="218" name="usergroup">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="240" parent="218" name="fk_name">
+    <index id="242" parent="218" name="fk_name">
       <ColNames>name</ColNames>
     </index>
-    <index id="241" parent="218" name="fk_fromUser">
+    <index id="243" parent="218" name="fk_fromUser">
       <ColNames>fromUser</ColNames>
     </index>
-    <index id="242" parent="218" name="fk_userID">
+    <index id="244" parent="218" name="fk_userID">
       <ColNames>userID</ColNames>
     </index>
-    <index id="243" parent="218" name="fk_usergroup">
+    <index id="245" parent="218" name="fk_usergroup">
       <ColNames>usergroup</ColNames>
     </index>
-    <key id="244" parent="218" name="PRIMARY">
+    <key id="246" parent="218" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="219" name="id">
+    <column id="247" parent="219" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="219" name="name">
+    <column id="248" parent="219" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="219" name="type">
+    <column id="249" parent="219" name="type">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="219" name="msg">
+    <column id="250" parent="219" name="msg">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="249" parent="219" name="PRIMARY">
+    <column id="251" parent="219" name="dData">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="252" parent="219" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="250" parent="220" name="key">
+    <column id="253" parent="220" name="key">
       <Position>1</Position>
       <DataType>int(8) unsigned zerofill|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="220" name="userID">
+    <column id="254" parent="220" name="userID">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="220" name="userName">
+    <column id="255" parent="220" name="userName">
       <Position>3</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="220" name="userOldName">
+    <column id="256" parent="220" name="userOldName">
       <Position>4</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="220" name="usergroup">
+    <column id="257" parent="220" name="usergroup">
       <Position>5</Position>
       <DataType>varchar(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="220" name="userAttribute">
+    <column id="258" parent="220" name="userAttribute">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <DefaultExpression>&apos;感应:0|亲善:0|意志:0|挑拨:0|运动:0|窃术:0|人脉:0|工艺:0|欺骗:0|射击:0|移情:0|打斗:0|调查:0|学识:0|资源:0|体魄:0|工程:0|电子:0|驾驶:0|机师等级:1|&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="220" name="userData">
+    <column id="259" parent="220" name="userData">
       <Position>7</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="220" name="userItem">
+    <column id="260" parent="220" name="userItem">
       <Position>8</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="220" name="userEquip">
+    <column id="261" parent="220" name="userEquip">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
       <DefaultExpression>&apos;武器1:无|武器2:无|防具:无|饰品1:无|饰品2:无|&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="259" parent="220" name="userID">
+    <index id="262" parent="220" name="userID">
       <ColNames>userID</ColNames>
     </index>
-    <index id="260" parent="220" name="userName">
+    <index id="263" parent="220" name="userName">
       <ColNames>userName</ColNames>
     </index>
-    <index id="261" parent="220" name="usergroup">
+    <index id="264" parent="220" name="usergroup">
       <ColNames>usergroup</ColNames>
     </index>
-    <key id="262" parent="220" name="PRIMARY">
+    <key id="265" parent="220" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="263" parent="221" name="id">
+    <column id="266" parent="221" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="221" name="mEN">
+    <column id="267" parent="221" name="mname">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="221" name="mST">
+    <column id="268" parent="221" name="uid">
       <Position>3</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="221" name="mMO">
+    <column id="269" parent="221" name="mEN">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="221" name="mSE">
+    <column id="270" parent="221" name="mST">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="221" name="attData">
+    <column id="271" parent="221" name="mMO">
       <Position>6</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="221" name="weapon1Data">
+    <column id="272" parent="221" name="mSE">
       <Position>7</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="221" name="weapon2Data">
+    <column id="273" parent="221" name="attData">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="221" name="weapon3Data">
+    <column id="274" parent="221" name="weapon1Data">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="221" name="weapon4Data">
+    <column id="275" parent="221" name="weapon2Data">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="273" parent="221" name="PRIMARY">
+    <column id="276" parent="221" name="weapon3Data">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="277" parent="221" name="weapon4Data">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="278" parent="221" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="274" parent="222" name="id">
+    <column id="279" parent="222" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="222" name="name">
+    <column id="280" parent="222" name="mname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="222" name="mEN">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="222" name="mST">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="222" name="mMO">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="222" name="mSE">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="222" name="attData">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="222" name="weapon1Data">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="222" name="weapon2Data">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="222" name="weapon3Data">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="289" parent="222" name="weapon4Data">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="290" parent="222" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="291" parent="223" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="223" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="222" name="type">
+    <column id="293" parent="223" name="type">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="222" name="msg">
+    <column id="294" parent="223" name="msg">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="278" parent="222" name="PRIMARY">
+    <key id="295" parent="223" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="279" parent="223" name="key">
+    <column id="296" parent="224" name="key">
       <Position>1</Position>
       <DataType>int(8) unsigned zerofill|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="223" name="userID">
+    <column id="297" parent="224" name="userID">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="223" name="userName">
+    <column id="298" parent="224" name="userName">
       <Position>3</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="223" name="userOldName">
+    <column id="299" parent="224" name="userOldName">
       <Position>4</Position>
       <DataType>varchar(40)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="223" name="usergroup">
+    <column id="300" parent="224" name="usergroup">
       <Position>5</Position>
       <DataType>varchar(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="223" name="userAttribute">
+    <column id="301" parent="224" name="userAttribute">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <DefaultExpression>&apos;魔法:0|魔识:0|魔药:0|炼金:0|运动:0|窃术:0|人脉:0|工艺:0|欺骗:0|驾驶:0|移情:0|打斗:0|调查:0|学识:0|察觉:0|体魄:0|挑拨:0|亲善:0|资源:0|射击:0|潜匿:0|意志:0|魔力亲和:4|&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="223" name="userData">
+    <column id="302" parent="224" name="userData">
       <Position>7</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="223" name="userItem">
+    <column id="303" parent="224" name="userItem">
       <Position>8</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="223" name="userEquip">
+    <column id="304" parent="224" name="userEquip">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
       <DefaultExpression>&apos;武器1:无|武器2:无|防具:无|饰品1:无|饰品2:无|&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="288" parent="223" name="userID">
+    <index id="305" parent="224" name="userID">
       <ColNames>userID</ColNames>
     </index>
-    <index id="289" parent="223" name="userName">
+    <index id="306" parent="224" name="userName">
       <ColNames>userName</ColNames>
     </index>
-    <index id="290" parent="223" name="usergroup">
+    <index id="307" parent="224" name="usergroup">
       <ColNames>usergroup</ColNames>
     </index>
-    <key id="291" parent="223" name="PRIMARY">
+    <key id="308" parent="224" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>key</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="309" parent="225" name="key">
+      <Position>1</Position>
+      <DataType>int(8) unsigned zerofill|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="225" name="userID">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="225" name="userName">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="225" name="userOldName">
+      <Position>4</Position>
+      <DataType>varchar(40)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="225" name="usergroup">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="314" parent="225" name="userAttribute">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;感应:0|亲善:0|意志:0|挑拨:0|运动:0|窃术:0|人脉:0|工艺:0|欺骗:0|射击:0|移情:0|打斗:0|调查:0|学识:0|资源:0|体魄:0|工程:0|电子:0|驾驶:0|机师等级:1|&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="225" name="userData">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="316" parent="225" name="userItem">
+      <Position>8</Position>
+      <DataType>text|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="317" parent="225" name="userEquip">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="318" parent="225" name="ujoinstate">
+      <Position>10</Position>
+      <DataType>varchar(10)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="319" parent="225" name="userID">
+      <ColNames>userID</ColNames>
+    </index>
+    <index id="320" parent="225" name="userName">
+      <ColNames>userName</ColNames>
+    </index>
+    <index id="321" parent="225" name="usergroup">
+      <ColNames>usergroup</ColNames>
+    </index>
+    <key id="322" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
       <Primary>1</Primary>

@@ -63,8 +63,8 @@ public class MfOrderImpl {
     }
     public static String mfZZ(QQuser u) {
         Random ra = new Random();
-        //		LinkedHashMap<String, Object> check = u.getUserData();
-        if(u.getUserData()==null||u.getUserData().get("火元素")==null){
+        //		LinkedHashMap<String, Object> check = u.getUserDataMap();
+        if(u.getUserDataMap()==null||u.getUserDataMap().get("火元素")==null){
             StringBuilder sbd = new StringBuilder(u.getUserName()+"的魔法资质为\\n");
             int[] inborn = new int[8];
             int index = 0;
@@ -101,7 +101,7 @@ public class MfOrderImpl {
             sbd.append("      金元素: ").append(inborn[7]).append("%\\n");
             sbd.append("    }\\n");
             System.out.println(sbd.toString());
-            LinkedHashMap<String, Object> L = (u.getUserData()==null? new LinkedHashMap<>():u.getUserData());
+            LinkedHashMap<String, Object> L = (u.getUserDataMap()==null? new LinkedHashMap<>():u.getUserDataMap());
             L.put("火元素", inborn[2]+"%");
             L.put("风元素", inborn[3]+"%");
             L.put("雷元素", inborn[4]+"%");
@@ -109,7 +109,7 @@ public class MfOrderImpl {
             L.put("水元素", inborn[6]+"%");
             L.put("金元素", inborn[7]+"%");
             u.setUserData(L);
-            sqlDao.saveData(u.getUserData(), u,myDice.getState());
+            sqlDao.saveData(u.getUserDataMap(), u,myDice.getState());
             return groupMsg(u.getUsergroup(),sbd.toString());
         }else{
             return groupMsg(u.getUsergroup(),"已经测过资质啦，不能重复测试。");
