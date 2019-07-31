@@ -183,8 +183,8 @@ public class PublicOrderImpl {
                 default:
                     return groupMsg(u.getUsergroup(), "模式错误！");
             }
-            diceSV.saveDiceState(value);
-            myDice = diceSV.diceLoad();
+            diceSv.saveDiceState(value);
+            myDice = diceSv.diceLoad();
             ARPGList = uSv.getUserList(myDice.getState());
         }else{
             sbd.append("您没有权限这么做！");

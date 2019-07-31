@@ -5,16 +5,12 @@
 */
 package lemocclient;
 
-import java.util.ArrayList;
-
-import com.fate.Dao.DataDao;
-import com.fate.Dao.UserDao;
-import com.fate.Dao.UnitsDao;
+import com.fate.Service.UserService;
 import com.fate.bean.DataMsg;
 import com.fate.bean.Dice;
 import com.fate.bean.QQuser;
 import com.fate.bean.Unit;
-
+import com.fate.util.StaticObjectUtils;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +18,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import java.util.ArrayList;
 
 import static com.fate.util.StaticObjectUtils.*;
 
@@ -29,13 +29,16 @@ import static com.fate.util.StaticObjectUtils.*;
 *
 * @author noname
 */
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration("classpath:applicationContext.xml")
+
 public class Lemocclient extends Application {
 
-	public static ArrayList<QQuser> groupList = new ArrayList<>();
-    public static ArrayList<QQuser> ARPGList = new ArrayList<>();
-	public static ArrayList<Unit> uList = new ArrayList<>();
-	public static ArrayList<DataMsg> dList = new ArrayList<>();
-	public static Dice myDice = diceSV.diceLoad();
+//  public static ArrayList<QQuser> groupList = new ArrayList<>();
+//  public static ArrayList<QQuser> ARPGList = new ArrayList<>();
+//	public static ArrayList<Unit> uList = new ArrayList<>();
+//	public static ArrayList<DataMsg> dList = new ArrayList<>();
+//	public static Dice myDice = diceSV.diceLoad();
 
 	@Override
     public void start(Stage stage) throws Exception {
@@ -65,20 +68,20 @@ public class Lemocclient extends Application {
 
     }
 
-
-
     public static void main(String[] args){
     	//groupList = IOUtils.readQQuser();
  //   	myDice = uSv.diceLoad();
-    	groupList = uSv.getUserList("QQ");
-    	ARPGList =  uSv.getUserList(myDice.getState());
-    	uList = uDao.loadUnits();
-    	dList = dDao.datafind(null,null);
+//        StaticObjectUtils su = new StaticObjectUtils();
+//        System.out.println(uSv);
+//    	groupList = uSv.getUserList("QQ");
+//    	ARPGList =  uSv.getUserList(myDice.getState());
+//    	uList = uDao.loadUnits();
+//    	dList = dDao.datafind(null,null);
+//    	for(QQuser A: groupList){
+//			System.out.println(A);
+//		}
 
-    	for(QQuser A: groupList){
-			System.out.println(A);
-		}
-    	launch(args);
+        launch(args);
     }
 
 }

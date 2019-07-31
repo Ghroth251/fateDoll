@@ -14,12 +14,7 @@ import static com.fate.controller.impl.PublicOrderImpl.fate;
 import static com.fate.util.FateUtils.*;
 import static com.fate.util.MapUtils.mapLoad;
 import static com.fate.util.StaticObjectUtils.*;
-import static com.fate.util.StaticObjectUtils.dDao;
-import static com.fate.util.StaticObjectUtils.uSv;
-import static com.fate.util.StaticObjectUtils.uDao;
-import static lemocclient.Lemocclient.groupList;
-import static lemocclient.Lemocclient.myDice;
-import static lemocclient.Lemocclient.uList;
+
 
 public class AUserOlderImpl {
     public static String dc(QQuser u, String value) {

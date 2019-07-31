@@ -15,7 +15,8 @@ import static com.fate.controller.impl.MfOrderImpl.*;
 import static com.fate.controller.impl.JjOrderImpl.*;
 import static com.fate.util.FateUtils.*;
 import static com.fate.util.StaticObjectUtils.fateState;
-import static lemocclient.Lemocclient.myDice;
+import static com.fate.util.StaticObjectUtils.myDice;
+
 
 
 /**

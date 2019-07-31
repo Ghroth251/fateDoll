@@ -2,12 +2,14 @@
   <dictionary name="Zhaoxun">
     <words>
       <w>addm</w>
+      <w>alibaba</w>
       <w>avoer</w>
       <w>comder</w>
       <w>cset</w>
       <w>cust</w>
       <w>datafind</w>
       <w>ddata</w>
+      <w>discription</w>
       <w>equid</w>
       <w>fatedb</w>
       <w>fatedoll</w>
@@ -20,6 +22,8 @@
       <w>jrrp</w>
       <w>liyanxing</w>
       <w>lmap</w>
+      <w>maxmp</w>
+      <w>mchange</w>
       <w>mecha</w>
       <w>mfuser</w>
       <w>mname</w>
@@ -35,6 +39,7 @@
       <w>updatem</w>
       <w>upmecha</w>
       <w>usergroup</w>
+      <w>webapp</w>
     </words>
   </dictionary>
 </component>

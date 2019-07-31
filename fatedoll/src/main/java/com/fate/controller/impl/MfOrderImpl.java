@@ -6,8 +6,8 @@ import java.util.LinkedHashMap;
 import java.util.Random;
 
 import static com.fate.util.FateUtils.groupMsg;
+import static com.fate.util.StaticObjectUtils.myDice;
 import static com.fate.util.StaticObjectUtils.uSv;
-import static lemocclient.Lemocclient.myDice;
 
 public class MfOrderImpl {
     public static String mfQH(QQuser u, String value) {

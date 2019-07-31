@@ -1,57 +1,68 @@
 package com.fate.Service.impl;
 
+import com.fate.Dao.UserDao;
 import com.fate.Service.UserService;
 import com.fate.bean.Item;
 import com.fate.bean.QQuser;
-import com.fate.Dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-
 import static com.fate.util.MapUtils.*;
-import static lemocclient.Lemocclient.myDice;
+import static com.fate.util.StaticObjectUtils.*;
 
+
+@Service
 public class UserServiceImpl implements UserService{
-    UserDao userDao = new UserDao();
+
+
+    @Autowired
+    UserDao uDo;
+
     @Override
     public QQuser getUserByUser(QQuser u) {
-        return userDao.getUserByUser(u);
+        return uDo.findByUserIDLikeAndUsergroupLike(u.getUserID(),u.getUsergroup());
     }
     @Override
     public ArrayList<QQuser> getUserList(String table) {
-        return userDao.getUserList(table);
+        return uDo.findByUjoinstateLike(table);
     }
     @Override
     public void addQQuser(QQuser A, String table) {
-        userDao.cuUser(new QQuser(A.getUserID(),
+        uDo.save(new QQuser(A.getUserID(),
                 A.getUserName(),A.getUserOldName(),
                 A.getUsergroup(),table));
     }
 
     @Override
     public void saveName(String name, QQuser u, String table) {
-        userDao.cuUser(new QQuser(u.getId(),u.getUserID(),name,u.getUserOldName(),
+        System.out.println(new QQuser(u.getId(),u.getUserID(),name,u.getUserOldName(),
+                u.getUsergroup(), u.getUserAttribute(),u.getUserData(),
+                u.getUserItem(), u.getUserEquip(),table));
+        uDo.save(new QQuser(u.getId(),u.getUserID(),name,u.getUserOldName(),
                 u.getUsergroup(), u.getUserAttribute(),u.getUserData(),
                 u.getUserItem(), u.getUserEquip(),table));
     }
 
     @Override
     public void saveData(LinkedHashMap<String, Object> L, QQuser u, String table) {
-        userDao.cuUser(new QQuser(u.getId(),u.getUserID(),u.getUserName(),u.getUserOldName(),
+        uDo.save(new QQuser(u.getId(),u.getUserID(),u.getUserName(),u.getUserOldName(),
                 u.getUsergroup(), u.getUserAttribute(),mapSave(L),
                 u.getUserItem(), u.getUserEquip(),table));
     }
 
     @Override
     public void saveAtt(LinkedHashMap<String, Object> L, QQuser u) {
-        userDao.cuUser(new QQuser(u.getId(),u.getUserID(),u.getUserName(),u.getUserOldName(),
+        uDo.save(new QQuser(u.getId(),u.getUserID(),u.getUserName(),u.getUserOldName(),
                 u.getUsergroup(), mapSave(L),u.getUserData(),
                 u.getUserItem(), u.getUserEquip(),myDice.getState())) ;
     }
 
     @Override
     public void saveItem(LinkedHashMap<Item, Integer> L, QQuser u) {
-        userDao.cuUser(new QQuser(u.getId(),u.getUserID(),u.getUserName(),u.getUserOldName(),
+        uDo.save(new QQuser(u.getId(),u.getUserID(),u.getUserName(),u.getUserOldName(),
                 u.getUsergroup(), u.getUserAttribute(),u.getUserData(),
                 itemSave(L), u.getUserEquip(),myDice.getState()));
     }

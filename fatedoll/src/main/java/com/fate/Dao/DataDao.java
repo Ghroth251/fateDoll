@@ -9,12 +9,13 @@ import com.fate.util.BaseDao;
 import com.fate.bean.DataMsg;
 import lemocclient.Lemocclient;
 import static com.fate.util.MapUtils.*;
+import static com.fate.util.StaticObjectUtils.myDice;
 
 public class DataDao extends BaseDao{
 	public ArrayList<DataMsg> datafind(String dataName,String dataType) {
 		ArrayList<DataMsg> list = new ArrayList<>();
 		StringBuilder sql = new StringBuilder("select * from ");
-		sql.append(Lemocclient.myDice.getState());
+		sql.append(myDice.getState());
 		sql.append("data where 1 = 1");
 		List<Object> parms = new ArrayList<>();
 		if (dataName != null && !"".equals(dataName)) {

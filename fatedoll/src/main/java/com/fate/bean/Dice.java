@@ -8,7 +8,7 @@ public class Dice {
 
 	@Id//声明当前私有属性为主键
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //配置主键的生成策略
-	private int id;
+	private Long id;
 	private String name;
 	private String shortName;
 	private String code;
@@ -24,7 +24,7 @@ public class Dice {
 		this.code = code;
 		this.State = State;
 	}
-	public Dice(int id,String name, String shortName, String code, String State) {
+	public Dice(Long id,String name, String shortName, String code, String State) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,10 +32,10 @@ public class Dice {
 		this.code = code;
 		this.State = State;
 	}
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {

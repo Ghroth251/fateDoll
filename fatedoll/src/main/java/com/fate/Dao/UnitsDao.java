@@ -5,16 +5,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
+import com.fate.Dao.impl.UserDaoImpl;
 import com.fate.util.BaseDao;
 import com.fate.bean.QQuser;
 import com.fate.bean.Unit;
 
 import lemocclient.Lemocclient;
 
-import static lemocclient.Lemocclient.myDice;
+import static com.fate.util.StaticObjectUtils.*;
+
 
 public class UnitsDao extends BaseDao{
-	static UserDao sqlDao = new UserDao();
 	public ArrayList<Unit> loadUnits(){
 		ArrayList<Unit> unitList;
 		String sql = "select * from fatemsg";
@@ -46,14 +47,14 @@ public class UnitsDao extends BaseDao{
 		for(Unit U:A){
 			if(U.getuType()==0){
 				int i = 0;
-				if((i = Lemocclient.groupList.indexOf(new QQuser(U.getUserID(),U.getUsergroup()))) != -1){
-					QQuser Q = Lemocclient.groupList.get(i);
+				if((i = groupList.indexOf(new QQuser(U.getUserID(),U.getUsergroup()))) != -1){
+					QQuser Q = groupList.get(i);
 					System.out.println(Q);
 					LinkedHashMap<String, Object> L = Q.getUserDataMap();
 					L.put("生理压力", U.getuHp());
 					L.put("心理压力", U.getuSp());
 					L.put("魔法压力", U.getuMp()+"/"+U.getuMaxmp());
-					sqlDao.saveData(L,Q,myDice.getState());
+					uSv.saveData(L,Q,myDice.getState());
 				}
 				saveUnit(U);
 			}else if(U.getuType()==1){

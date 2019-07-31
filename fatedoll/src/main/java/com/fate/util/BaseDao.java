@@ -29,10 +29,10 @@ public class BaseDao {
 		//静态代码块，性能高，只加载一次！
 		try {
 			Properties p=new Properties();
-			p.load(BaseDao.class.getClassLoader().getResourceAsStream("jdbc.properties"));
+			p.load(BaseDao.class.getClassLoader().getResourceAsStream("db.properties"));
 			driverClass=(String) p.get("driverClass");
-			url=(String) p.get("url");
-			username=(String) p.get("username");
+			url=(String) p.get("jdbcUrl");
+			username=(String) p.get("user");
 			password=(String) p.get("password");
 		} catch (Exception e) {
 			e.printStackTrace();

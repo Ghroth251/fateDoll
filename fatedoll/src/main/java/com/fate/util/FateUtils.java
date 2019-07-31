@@ -8,9 +8,7 @@ import com.fate.Dao.DataDao;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static lemocclient.Lemocclient.ARPGList;
-import static lemocclient.Lemocclient.groupList;
-
+import static com.fate.util.StaticObjectUtils.*;
 public class FateUtils {
     static DataDao dDao =new DataDao();
 

@@ -15,8 +15,8 @@ public class QQuser implements Serializable{
 
 	@Id//声明当前私有属性为主键
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //配置主键的生成策略
-	@Column(name = "key") //指定和表中cust_id字段的映射关系
-	private int id;
+//	@Column(name = "id") //指定和表中cust_id字段的映射关系
+	private long id;
 	private String userID;
 	private String userName;
 	private String userOldName;
@@ -71,11 +71,11 @@ public class QQuser implements Serializable{
 		this.userItem = userItem;
 		this.userEquip = userEquip;
 	}
-    public QQuser(int id,String userID, String userName, String userOldName, String usergroup,
+    public QQuser(long id, String userID, String userName, String userOldName, String usergroup,
                   String userAttribute, String userData,
-                  String userItem, String userEquip,String ujoinstate) {
+                  String userItem, String userEquip, String ujoinstate) {
         super();
-        this.id= id;
+        this.id = id;
         this.userID = userID;
         this.userName = userName;
         this.userOldName = userOldName;
@@ -92,10 +92,10 @@ public class QQuser implements Serializable{
 	public void setUjoinstate(String ujoinstate) {
 		this.ujoinstate = ujoinstate;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getUserID() {

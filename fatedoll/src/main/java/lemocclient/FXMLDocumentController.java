@@ -15,6 +15,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.fate.Service.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,11 +29,13 @@ import org.java_websocket.drafts.Draft;
 import org.java_websocket.drafts.Draft_17;
 import org.java_websocket.handshake.ServerHandshake;
 
-import com.fate.Dao.UserDao;
+import com.fate.Dao.impl.UserDaoImpl;
 import com.fate.controller.FateController;
 import com.fate.bean.QQuser;
 
 import javafx.application.Platform;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import static com.fate.util.StaticObjectUtils.*;
 import static lemocclient.Lemocclient.*;
@@ -46,11 +50,14 @@ import static lemocclient.Lemocclient.*;
  *
  * @author noname
  */
+@Controller
 public class FXMLDocumentController implements Initializable {
 	public static WebSocketClient cc;
 	public static boolean connected = false;
-	static UserDao sqlDao = new UserDao();
 	String LemocUrl = "ws://localhost:25303";
+
+	@Autowired
+	public UserService uSv;
 
 	@FXML
 	ListView<String> msgList;
@@ -73,7 +80,11 @@ public class FXMLDocumentController implements Initializable {
 	@FXML
 	private void OnConAction(ActionEvent event) {
 		//System.out.println("You clicked me!");
-		try {   
+        if(groupList==null){
+            groupList = uSv.getUserList("QQ");
+            System.out.println(groupList);
+        }
+        try {
 			// cc = new ChatClient(new URI(uriField.getText()), area, ( Draft ) draft.getSelectedItem() );
 			//默认使用draft_17, java_websocket支持Draft_17, Draft_10, Draft_76, Draft_75
 			cc = new WebSocketClient( new URI( LemocUrl ), (Draft) new Draft_17() ) {
@@ -219,8 +230,7 @@ public class FXMLDocumentController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
-		WebSocketImpl.DEBUG = true;
+	    WebSocketImpl.DEBUG = true;
 		bSend.setDisable(true);
 		bCon.setDisable(false);
 		tQQ.setDisable(true);
