@@ -15,8 +15,8 @@
     <!--Spring和SpringData JPA框架整合-->
 
     <!--1.开启包扫描，扫描service层，让service层的对象交给Spring容器管理-->
-    <context:component-scan base-package="com.fate.Service"/>
-    <context:component-scan base-package="com.fate.util"/>
+    <context:component-scan base-package="com.ghroth251.Service"/>
+    <context:component-scan base-package="com.ghroth251.util"/>
     <context:component-scan base-package="webController"/>
 
     <!--2.读取properties文件-->
@@ -48,7 +48,7 @@
         </property>
 
         <!-- 配置包扫描，扫描实体 -->
-        <property name="packagesToScan" value="com.fate.bean" />
+        <property name="packagesToScan" value="com.ghroth251.bean" />
 
         <property name="jpaProperties">
             <props>
@@ -59,7 +59,7 @@
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 
                 <!--打印SQL语句-->
-                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.show_sql">false</prop>
                 <prop key="hibernate.format_sql">true</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
@@ -80,12 +80,12 @@
 
     <!-- 5. 配置 SpringData,需要加入 jpa 的命名空间 -->
     <!-- base-package: 扫描 Repository Bean 所在的 package -->
-    <jpa:repositories base-package="com.fate.Dao"
+    <jpa:repositories base-package="com.ghroth251.Dao"
                       entity-manager-factory-ref="entityManagerFactory">
     </jpa:repositories>
 
     <!--7.扫描项目中的包的注解-->
-    <!--<context:component-scan base-package="com.fate.*"/>-->
+    <!--<context:component-scan base-package="com.com.ghroth251th251.*"/>-->
     <!--<context:component-scan base-package="lemocclient"/>-->
 
 </beans>
